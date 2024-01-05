@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:5px;
+  background-color: teal;
+  color: #fff;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+/* LOGO */
+.logo {
+  font-size: 32px;
+}
+
+/* NAVBAR MENU */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+.menu li:hover {
+  background-color: #4c9e9e;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 5px 14px;
+}
+
+/* DROPDOWN MENU */
+.services {
+  position: relative; 
+}
+
+.dropdown {
+  background-color: rgb(1, 139, 139);
+  padding: 1em 0;
+  position: absolute; /*WITH RESPECT TO PARENT*/
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+}
+
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: #4c9e9e;
+}
+
+.services:hover .dropdown {
+  display: block;
+}
+
+
+input[type=checkbox] {
+  display: none;
+} 
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+.container {
+  height: 100vh;
+}
+.container img {
+  width: 100%;
+  position: absolute;
+  height: 110vh;
+  object-fit: cover;
+  z-index: -1;
+}
+.main-title {
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 0 20px 20px rgba(0,0,0,.15);
+  transform: translate(-50%, -30%);
+}
+
+.content, .content-2 {
+  width: 100%;
+  background: rgb(24, 24, 24);
+  z-index: 2;
+  color: #fff;
+  position: absolute;
+}
+.content-images, .content-images-lake {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+.content-images-lake {
+  position: relative;
+  min-height: 60vh;
+}
+.image {
+  object-fit: cover;
+  width: 30rem;
+  height: 21rem;
+  
+}
+.lake {
+  object-fit: cover;
+  width: 100%;
+}
+.centerLake {
+  position: absolute;
+  top: 20%;
+  left: 22%;
+  font-size: 4rem;
+  
+}
+.centerLake h3, .centerLake h1 {
+  text-shadow:  0.5em 0 1em rgba(165, 169, 174,.1);
+}
+.text, .text-2 {
+  padding: 2rem 2rem;
+  font-size: 1.1rem;
+}
+
+.button {
+  cursor: pointer;
+  padding: 12px 20px;
+  margin: 0 5px;
+  border-radius: 10px;
+  background-color: black;
+  color: #fff;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: rgba(233, 236, 239, 0.6);
+  color: black;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.glass-container {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 25px;
+  margin-top: -120px;
+  margin-left: 110px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 600px;
+}
+
+h4 {
+  text-align: center;
+  color: black;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  margin-bottom: 3px;
+  font-size: 20px;
+  color: black;
+}
+
+.contact-input {
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.contact-btn {
+  background: #1e90ff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.glass-container input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid black;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.glass-container input[type=submit] {
+  background-color: black;
+  color:white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.glass-container label{
+  text-align: left;
+}
+
+.catalog {  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: space-evenly;
+}
+
+@media (max-width: 768px) {
+  .menu {
+     display:none;
+     position: absolute;
+     background-color:teal;
+     right: 0;
+     left: 0;
+     text-align: center;
+     padding: 16px 0;
+   }
+ 
+   .menu li:hover {
+     display: inline-block;
+     background-color:#4c9e9e;
+     transition: 0.3s ease;
+   }
+ 
+   .menu li + li {
+     margin-top: 12px;
+   }
+ 
+   input[type=checkbox]:checked ~ .menu {
+     display: block;
+   }
+ 
+   .hamburger {
+     display: block;
+   }
+ 
+   .dropdown {
+     left: 50%;
+     top: 30px;
+     transform: translateX(35%);
+   }
+ 
+   .dropdown li:hover {
+     background-color: #4c9e9e;
+   }
+ 
+   .catalog {  
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     justify-content: center;
+     align-content: space-evenly;
+   }
+ 
+ }
+
+ #catalog{
+  width:100%;
+  display:table;
+  border-spacing:5px;
+  }
+  
+  #box{
+  width:30%;
+  height:200px;
+  display:table-cell;
+  
+  }
+  
+  @media screen and (max-width:760px)
+  {
+  #box
+  {
+  width:100%;
+  display:grid;
+  grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 200px;
+  align-content: space-evenly;
+  }
+
+  .text {
+    position: absolute;
+    bottom: 10px; /* Adjust text position */
+    left: 10px; /* Adjust text position */
+    color: #fff; /* Adjust text color */
+    margin-top: 100px;
+    /* Other text styles */
+  }
+
+  .image {
+    object-fit: cover;
+    margin-top: -30px;
+    width: 80%;
+    height: 90%;
+  }
+
+  .lake {
+   width: 100vh;
+   height: 100vh;
+  }
+
+  .glass-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 70vw;
+  }
+  
+  h4 {
+    font-size: 25px;
+    text-align: center;
+    color: black;
+    margin-bottom: 7px;
+  }
+
+  label {
+    margin-bottom: 3px;
+    font-size: 15px;
+    color: black;
+  }
+
+  #contact-container {
+    background: rgba(255, 255, 255, 0.2); /* Adjust the opacity for the glass effect */
+    backdrop-filter: blur(10px); /* Apply a backdrop blur for the glass-like effect */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin-top: -10vh;
+    margin-left: -1vw;
+  }
+  }
+
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  #contact-container {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #contact-container {
+    max-width: 100%;
+  }
+}
+
+/* Additional styling for form elements */
+/* Customize according to your design */
+#glass-container form input[type="text"],
+#glass-container form textarea,
+#glass-container form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.image-container:hover .image {
+  transform: scale(1.1);
+}

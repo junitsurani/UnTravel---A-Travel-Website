@@ -1,0 +1,32 @@
+body,
+html {
+    height: 100%;
+}
+
+.parallax {
+    background-image: url("./images/w1.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.parallax1 {
+    background-image: url("./images/w2.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.back {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+
+}
